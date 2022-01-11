@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="item_size">48dp</dimen>
-    <dimen name="item_padding">180dp</dimen>
+    <dimen name="item_size_width">134dp</dimen>
+    <dimen name="item_size_height">130dp</dimen>
+    <dimen name="item_padding">145dp</dimen>
 </resources>

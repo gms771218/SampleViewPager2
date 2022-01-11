@@ -8,8 +8,8 @@
     <ImageButton
         android:id="@+id/imageButton"
         android:background="@null"
-        android:layout_width="@dimen/item_size"
-        android:layout_height="@dimen/item_size"
+        android:layout_width="@dimen/item_size_width"
+        android:layout_height="@dimen/item_size_height"
         android:layout_gravity="center"
         android:clickable="false"/>
 

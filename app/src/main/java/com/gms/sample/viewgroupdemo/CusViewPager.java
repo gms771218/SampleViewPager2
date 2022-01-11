@@ -16,6 +16,7 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.gms.sample.viewgroupdemo.viewpager.ISelectListener;
 import com.gms.sample.viewgroupdemo.viewpager.Item;
 import com.gms.sample.viewgroupdemo.viewpager.ItemAdapter;
+import com.gms.sample.viewgroupdemo.viewpager.transform.ScaleTransformer;
 import com.gms.sample.viewgroupdemo.viewpager.transform.TintColorTransformer;
 
 import java.util.ArrayList;
@@ -114,6 +115,7 @@ public class CusViewPager extends FrameLayout {
         CompositePageTransformer pageTransformer = new CompositePageTransformer();
         pageTransformer.addTransformer(new MarginPageTransformer(0));
         pageTransformer.addTransformer(new TintColorTransformer());
+        pageTransformer.addTransformer(new ScaleTransformer());
         return  pageTransformer ;
     }
 

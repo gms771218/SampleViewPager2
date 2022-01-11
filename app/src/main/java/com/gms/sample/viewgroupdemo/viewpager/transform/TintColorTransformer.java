@@ -8,6 +8,9 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.viewpager2.widget.ViewPager2;
 
+/**
+ * 填色效果
+ */
 public class TintColorTransformer implements ViewPager2.PageTransformer {
 
     @Override
@@ -16,9 +19,9 @@ public class TintColorTransformer implements ViewPager2.PageTransformer {
         if( view instanceof ImageView){
 
             if(position == 0) {
-                ((ImageView) view).setColorFilter(Color.RED);
+                ((ImageView) view).setColorFilter(Color.WHITE);
             }else {
-                ((ImageView) view).setColorFilter(Color.TRANSPARENT);
+                ((ImageView) view).setColorFilter(Color.GRAY);
             }
 
         }
