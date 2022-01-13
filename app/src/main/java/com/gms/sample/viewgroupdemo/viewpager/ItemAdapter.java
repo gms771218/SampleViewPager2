@@ -45,11 +45,11 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemViewHolder> {
 
     @Override
     public int getItemCount() {
-        return (mSource ==null) ? 0 :mSource.size() ;
+        return Integer.MAX_VALUE; // (mSource ==null) ? 0 :mSource.size() ;
     }
 
     public Item getItem(int position){
-        return mSource.get(position);
+        return mSource.get(position % mSource.size());
     }
 
 }

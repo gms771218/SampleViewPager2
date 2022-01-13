@@ -60,6 +60,7 @@ public class CusViewPager extends FrameLayout {
             int padding = (int)getResources().getDimension(R.dimen.item_padding);
             recyclerView.setPadding(padding, 0, padding, 0);
             ((RecyclerView) recyclerView).setClipToPadding(false);
+            ((RecyclerView) recyclerView).scrollToPosition(Integer.MAX_VALUE / 2);
         }
         viewPager.setPageTransformer(getPageTransformer());
         viewPager.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
@@ -70,7 +71,7 @@ public class CusViewPager extends FrameLayout {
                 for (int i = 0 ; i<mSource.size() ; i++){
                     mSource.get(i).enabled = false;
                 }
-                Item item = mSource.get(position);
+                Item item = mSource.get(position % mSource.size());
                 item.enabled = true;
 //                Toast.makeText(getContext() , item.name , Toast.LENGTH_SHORT ).show();
             }
